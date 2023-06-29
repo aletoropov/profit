@@ -34,22 +34,22 @@ include __DIR__ . DIRECTORY_SEPARATOR . "functions.php";
     <tr>
         <td>0</td>
         <td>0</td>
-        <td><?=checkTruth(0, 0, 'and');?></td>
+        <td><?php echo checkTruth(0, 0, 'and');?></td>
     </tr>
     <tr>
         <td>0</td>
         <td>1</td>
-        <td><?=checkTruth(0, 1, 'and');?></td>
+        <td><?php echo checkTruth(0, 1, 'and');?></td>
     </tr>
     <tr>
         <td>1</td>
         <td>0</td>
-        <td><?=checkTruth(1, 0, 'and');?></td>
+        <td><?php echo checkTruth(1, 0, 'and');?></td>
     </tr>
     <tr>
         <td>1</td>
         <td>1</td>
-        <td><?=checkTruth(1, 1, 'and');?></td>
+        <td><?php echo checkTruth(1, 1, 'and');?></td>
     </tr>
 </table>
 <h3>Дизъюнкция</h3>
@@ -62,22 +62,22 @@ include __DIR__ . DIRECTORY_SEPARATOR . "functions.php";
     <tr>
         <td>0</td>
         <td>0</td>
-        <td><?=checkTruth(0, 0, 'or');?></td>
+        <td><?php echo checkTruth(0, 0, 'or');?></td>
     </tr>
     <tr>
         <td>0</td>
         <td>1</td>
-        <td><?=checkTruth(0, 1, 'or');?></td>
+        <td><?php echo checkTruth(0, 1, 'or');?></td>
     </tr>
     <tr>
         <td>1</td>
         <td>0</td>
-        <td><?=checkTruth(1, 0, 'or');?></td>
+        <td><?php echo checkTruth(1, 0, 'or');?></td>
     </tr>
     <tr>
         <td>1</td>
         <td>1</td>
-        <td><?=checkTruth(1, 1, 'or');?></td>
+        <td><?php echo checkTruth(1, 1, 'or');?></td>
     </tr>
 </table>
     <h3>Сложение по модулю</h3>
@@ -90,22 +90,22 @@ include __DIR__ . DIRECTORY_SEPARATOR . "functions.php";
         <tr>
             <td>0</td>
             <td>0</td>
-            <td><?=checkTruth(0, 0, 'xor');?></td>
+            <td><?php echo checkTruth(0, 0, 'xor');?></td>
         </tr>
         <tr>
             <td>0</td>
             <td>1</td>
-            <td><?=checkTruth(0, 1, 'xor');?></td>
+            <td><?php echo checkTruth(0, 1, 'xor');?></td>
         </tr>
         <tr>
             <td>1</td>
             <td>0</td>
-            <td><?=checkTruth(1, 0, 'xor');?></td>
+            <td><?php echo checkTruth(1, 0, 'xor');?></td>
         </tr>
         <tr>
             <td>1</td>
             <td>1</td>
-            <td><?=checkTruth(1, 1, 'xor');?></td>
+            <td><?php echo checkTruth(1, 1, 'xor');?></td>
         </tr>
     </table>
 </body>
