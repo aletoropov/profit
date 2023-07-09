@@ -69,3 +69,27 @@ function getSecondSquare(int $b, int $d, int $a) : float|int
 {
     return (-$b - sqrt($d)) / (2 * $a);
 }
+
+/**
+ * Функция для определения пола человека по его имени.
+ * @param string $name
+ * @return string|null
+ */
+function checkGender(string $name) : ?string
+{
+    $exceptionsMaleNames = ['Дима', 'Лёша', 'Паша', 'Костя', 'Илья'];
+    $lastLettersMaleName = ['й', 'р', 'м'];
+    $exceptionsFemaleNames = ['Маша', 'Наташа', 'Алена'];
+    $lastLettersFemaleName = ['a', 'я'];
+    $lastLetters = mb_substr($name, -1);
+
+    if (in_array($name, $exceptionsMaleNames) || in_array($lastLetters, $lastLettersMaleName)) {
+        return 'male';
+    }
+
+    if (in_array($name, $exceptionsFemaleNames) || in_array($lastLetters, $lastLettersFemaleName)) {
+        return 'female';
+    }
+
+    return null;
+}
