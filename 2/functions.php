@@ -38,9 +38,34 @@ function checkTruth(bool|int $a, bool|int $b, string $operator) : ?int
  * @param int $a
  * @param int $b
  * @param int $c
- * @return int
+ * @return float|int
  */
-function getDiscriminant(int $a, int $b, int $c) : int
+function getDiscriminant(int $a, int $b, int $c): float|int
 {
     return ($b*$b) - (4*$a*$c);
+}
+
+/**
+ * Функция вычисления первого корня.
+ *
+ * @param int $b
+ * @param int $d
+ * @param int $a
+ * @return float|int
+ */
+function getFirstSquare(int $b, int $d, int $a) : float|int
+{
+    return (-$b + sqrt($d)) / (2 * $a);
+}
+
+/**
+ * Функция вычисления второго корня.
+ * @param int $b
+ * @param int $d
+ * @param int $a
+ * @return float|int
+ */
+function getSecondSquare(int $b, int $d, int $a) : float|int
+{
+    return (-$b - sqrt($d)) / (2 * $a);
 }
