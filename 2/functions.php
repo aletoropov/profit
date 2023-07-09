@@ -31,3 +31,16 @@ function checkTruth(bool|int $a, bool|int $b, string $operator) : ?int
             return null;
     }
 }
+
+/**
+ * Функция вычисления дискриминанта
+ *
+ * @param int $a
+ * @param int $b
+ * @param int $c
+ * @return int
+ */
+function getDiscriminant(int $a, int $b, int $c) : int
+{
+    return ($b*$b) - (4*$a*$c);
+}
