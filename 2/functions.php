@@ -15,13 +15,13 @@ function checkTruth(bool|int $a, bool|int $b, string $operator) : ?int
             } else {
                 return 0;
             }
-        case 'and':
+        case '&&':
             if ($a and $b) {
                 return 1;
             } else {
                 return 0;
             }
-        case 'or':
+        case '||':
             if ($a or $b) {
                 return 1;
             } else {

@@ -5,7 +5,7 @@
  * для логических операторов &&, || и xor.
  */
 
-include __DIR__ . DIRECTORY_SEPARATOR . "functions.php";
+include __DIR__ . DIRECTORY_SEPARATOR . 'functions.php';
 
 ?>
 
@@ -29,27 +29,27 @@ include __DIR__ . DIRECTORY_SEPARATOR . "functions.php";
     <tr>
         <th>a</th>
         <th>b</th>
-        <th>a xor b</th>
+        <th>a && b</th>
     </tr>
     <tr>
         <td>0</td>
         <td>0</td>
-        <td><?php echo checkTruth(0, 0, 'and');?></td>
+        <td><?php echo checkTruth(0, 0, '&&');?></td>
     </tr>
     <tr>
         <td>0</td>
         <td>1</td>
-        <td><?php echo checkTruth(0, 1, 'and');?></td>
+        <td><?php echo checkTruth(0, 1, '&&');?></td>
     </tr>
     <tr>
         <td>1</td>
         <td>0</td>
-        <td><?php echo checkTruth(1, 0, 'and');?></td>
+        <td><?php echo checkTruth(1, 0, '&&');?></td>
     </tr>
     <tr>
         <td>1</td>
         <td>1</td>
-        <td><?php echo checkTruth(1, 1, 'and');?></td>
+        <td><?php echo checkTruth(1, 1, '&&');?></td>
     </tr>
 </table>
 <h3>Дизъюнкция</h3>
@@ -57,30 +57,30 @@ include __DIR__ . DIRECTORY_SEPARATOR . "functions.php";
     <tr>
         <th>a</th>
         <th>b</th>
-        <th>a xor b</th>
+        <th>a || b</th>
     </tr>
     <tr>
         <td>0</td>
         <td>0</td>
-        <td><?php echo checkTruth(0, 0, 'or');?></td>
+        <td><?php echo checkTruth(0, 0, '||');?></td>
     </tr>
     <tr>
         <td>0</td>
         <td>1</td>
-        <td><?php echo checkTruth(0, 1, 'or');?></td>
+        <td><?php echo checkTruth(0, 1, '||');?></td>
     </tr>
     <tr>
         <td>1</td>
         <td>0</td>
-        <td><?php echo checkTruth(1, 0, 'or');?></td>
+        <td><?php echo checkTruth(1, 0, '||');?></td>
     </tr>
     <tr>
         <td>1</td>
         <td>1</td>
-        <td><?php echo checkTruth(1, 1, 'or');?></td>
+        <td><?php echo checkTruth(1, 1, '||');?></td>
     </tr>
 </table>
-    <h3>Сложение по модулю</h3>
+    <h3>Исключающее "или"</h3>
     <table>
         <tr>
             <th>a</th>
