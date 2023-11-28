@@ -32,16 +32,16 @@ if (!empty($_GET)) {
 
     switch ($action) {
         case '+':
-            echo $operand1 . ' + ' . $operand2 . ' = ' . $operand1 + $operand2;
+            echo $operand1 . ' + ' . $operand2 . ' = ' . ($operand1 + $operand2);
             break;
         case '-':
-            echo $operand1 . ' - ' . $operand2 . ' = ' . $operand1 - $operand2;
+            echo $operand1 . ' - ' . $operand2 . ' = ' . ($operand1 - $operand2);
             break;
         case '*':
-            echo $operand2 . ' * ' . $operand2 . ' = ' . $operand1 * $operand2;
+            echo $operand2 . ' * ' . $operand2 . ' = ' . ($operand1 * $operand2);
             break;
         case '/':
-            echo $operand2 . ' / ' . $operand2 . ' = ' . $operand1 / $operand2;
+            echo $operand2 . ' / ' . $operand2 . ' = ' . ($operand1 / $operand2);
             break;
         default:
             echo 'Не удалось найти ответ';
@@ -50,14 +50,20 @@ if (!empty($_GET)) {
 
 ?>
     <form name="calculator" method="get">
-        <input type="number" name="operand1">
-        <select name="action">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-        </select>
-        <input type="number" name="operand2">
+        <label>
+            <input type="number" name="operand1">
+        </label>
+        <label>
+            <select name="action">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </label>
+        <label>
+            <input type="number" name="operand2">
+        </label>
         <input type="submit" value="=">
     </form>
 </body>
