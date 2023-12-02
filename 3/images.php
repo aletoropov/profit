@@ -5,8 +5,8 @@
  */
 
 return [
-    1 => 'images/img1.jpg',
-    2 => 'images/img2.jpg',
-    3 => 'images/img3.jpg',
-    4 => 'images/img4.jpg',
+    1 => 'images' . DIRECTORY_SEPARATOR . 'img1.jpg',
+    2 => 'images' . DIRECTORY_SEPARATOR . 'img2.jpg',
+    3 => 'images' . DIRECTORY_SEPARATOR . 'img3.jpg',
+    4 => 'images' . DIRECTORY_SEPARATOR . 'img4.jpg',
 ];
