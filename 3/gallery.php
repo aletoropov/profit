@@ -9,8 +9,28 @@
  * однако вы можете предложить и другое решение. Кстати, этот же массив вы используете и в пункте 1 - для вывода изображений!
  */
 
+?>
+
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Галерея изображений</title>
+</head>
+<body>
+
+<?php
+
 $imageList = include __DIR__ . DIRECTORY_SEPARATOR . 'images.php';
 
 foreach ($imageList as $id => $oneImage) {
     echo '<div style="margin: 20px;"><a href="image.php?id=' . $id .'"><img src="'. $oneImage . '" alt=""></a></div>';
 }
+
+?>
+
+</body>
+</html>
