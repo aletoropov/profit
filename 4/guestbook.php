@@ -12,7 +12,12 @@ require __DIR__ . DIRECTORY_SEPARATOR . 'functions.php';
 
 $gbMessage = getGbMessage('db.txt');
 
+foreach ($gbMessage as $message) {
+    echo '<div>' . $message . '</div>';
+}
+
 ?>
+
 
 <form method="post" action="add.php">
     <div>
