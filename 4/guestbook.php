@@ -14,5 +14,14 @@ $gbMessage = getGbMessage('db.txt');
 
 ?>
 
+<form method="post" action="add.php">
+    <div>
+        <textarea name="message"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="Оставить сообщение">
+    </div>
+</form>
+
 </body>
 </html>
