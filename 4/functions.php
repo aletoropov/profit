@@ -29,7 +29,7 @@ function getGbMessage(string $file = 'db.txt'): array
  * @param string $file
  * @return void
  */
-function addGbMessage(string $message, string $file = 'db.txt')
+function addGbMessage(string $message, string $file = 'db.txt'): void
 {
     $dataFile = __DIR__ . DIRECTORY_SEPARATOR . $file;
     $message = trim($message);
