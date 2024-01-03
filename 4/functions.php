@@ -3,10 +3,10 @@
 /**
  * Функция чтения сообщений гостевой книги из файла.
  *
- * @param $file
+ * @param string $file
  * @return array
  */
-function getGbMessage($file): array
+function getGbMessage(string $file = 'db.txt'): array
 {
   $dataFile = __DIR__ . DIRECTORY_SEPARATOR . $file;
 
@@ -20,4 +20,19 @@ function getGbMessage($file): array
   }
   return $data;
 
+}
+
+/**
+ * Функция добавления нового сообщения в гостевую книгу
+ *
+ * @param string $message
+ * @param string $file
+ * @return void
+ */
+function addGbMessage(string $message, string $file = 'db.txt')
+{
+    $dataFile = __DIR__ . DIRECTORY_SEPARATOR . $file;
+    $message = trim($message);
+    $message = $message . PHP_EOL;
+    file_put_contents($dataFile, $message, FILE_APPEND | LOCK_EX);
 }
