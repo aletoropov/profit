@@ -16,7 +16,7 @@ function getGbMessage(string $file = 'db.txt'): array
         $data[] = fgets($fn);
     }
   } else {
-      $data[] = 'Файл с сообщениями отсутсвует или недоступен :(';
+      $data[] = 'Файл с сообщениями отсутствует или недоступен :(';
   }
   return $data;
 
