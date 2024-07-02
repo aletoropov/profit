@@ -36,3 +36,24 @@ function addGbMessage(string $message, string $file = 'db.txt'): void
     $message = $message . PHP_EOL;
     file_put_contents($dataFile, $message, FILE_APPEND | LOCK_EX);
 }
+
+/**
+ * Функция сканирования папки в поиске изображений
+ *
+ * @return array
+ */
+function getAllImages($directory = '/images'): array
+{
+    $images = [];
+    $ignoreFiles = ['.', '..'];
+    $files = scandir($directory);
+
+    foreach ($files as $file) {
+        if (in_array($file, $ignoreFiles)) {
+            continue;
+        }
+        $images[] = $file;
+    }
+
+    return $images;
+}
