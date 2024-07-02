@@ -40,6 +40,7 @@ function addGbMessage(string $message, string $file = 'db.txt'): void
 /**
  * Функция сканирования папки в поиске изображений
  *
+ * @param string $directory
  * @return array
  */
 function getAllImages($directory = '/images'): array
