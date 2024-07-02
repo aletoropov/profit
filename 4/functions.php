@@ -43,10 +43,10 @@ function addGbMessage(string $message, string $file = 'db.txt'): void
  * @param string $directory
  * @return array
  */
-function getAllImages(string $directory = '/images'): array
+function getAllImages(string $directory = __DIR__ . '/images/'): array
 {
     $images = [];
-    $ignoreFiles = ['.', '..'];
+    $ignoreFiles = ['.', '..', '.gitkeep'];
     $files = scandir($directory);
 
     foreach ($files as $file) {
