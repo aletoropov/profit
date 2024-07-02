@@ -19,7 +19,8 @@ $images = getAllImages();
 
 <?php
 foreach ($images as $image) {
-    echo '<img src="' . __DIR__ . DIRECTORY_SEPARATOR , 'images' . DIRECTORY_SEPARATOR . $image . '">';
+    $imageLink = __DIR__ . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR . $image ;
+    echo '<div><img src="' . $imageLink . '" alt="' . $image. '"></div>';
 }
 ?>
 
