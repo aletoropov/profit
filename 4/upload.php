@@ -13,13 +13,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $uploadedFile     = $_FILES['image']['tmp_name'];
         $uploadedFileName = $_FILES['image']['name'];
         $errorCode        = $_FILES['image']['error'];
+        $fileInfo         = pathinfo($uploadedFileName);
+    }
+
+    $allowUpload = ['jpg', 'jpeg', 'png', 'gif'];
+
+    if (!in_array($fileInfo['extension'], $allowUpload)) {
+        trigger_error('Вы загружаете не изображение', E_USER_ERROR);
     }
 
     if ($errorCode == 0) {
         if (move_uploaded_file($uploadedFile, $path . $uploadedFileName)) {
             echo 'Файл загружен!';
         } else {
-            echo $errorCode;
+            trigger_error($errorCode, E_USER_ERROR);
         }
     }
 }
